@@ -1,0 +1,13 @@
+.detail-view {
+
+}
+
+.detail-view .detail-key {
+  display: inline-block;
+  padding-right: .25em;
+  font-weight: bold;
+}
+
+.detail-view .detail-value {
+  display: inline-block;
+}
