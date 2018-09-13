@@ -20,7 +20,6 @@ function fetchAppList() {
       fetch(`http://localhost:4200/list`)
       .then(response => {
         response.json().then(apps => {
-          console.log(apps);
           return dispatch(receivedAppList(apps));
         });
       });
