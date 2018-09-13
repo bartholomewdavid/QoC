@@ -1,13 +1,21 @@
 .detail-view {
-
 }
 
-.detail-view .detail-key {
+.detail-wrapper {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.detail-row {
+  margin-bottom: 1em;
+}
+
+.detail-key {
   display: inline-block;
   padding-right: .25em;
   font-weight: bold;
 }
 
-.detail-view .detail-value {
+.detail-value {
   display: inline-block;
 }

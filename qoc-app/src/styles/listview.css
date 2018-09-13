@@ -1,3 +1,33 @@
 .list-view {
 
 }
+
+.list-view-row {
+  border-top: 1px solid rgba(0, 0, 0, .25);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  line-height: 1;
+}
+
+.list-view-row:first-of-type {
+  border-top: none;
+}
+
+.list-view-row__link {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  height: 80px;
+}
+
+.list-view-row__thumb {
+  float: left;
+  display: block;
+  height: 100%;
+  line-height: 1;
+}
+
+.list-view-row__label {
+  display: inline-block;
+  margin: .5em;
+}

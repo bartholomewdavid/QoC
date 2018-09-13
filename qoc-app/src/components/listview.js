@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { fetchAppList } from '../actions';
 
 import { Link } from 'react-router-dom';
+import { Loading } from './loading';
 
 class ListView extends Component {
   componentDidMount() {
@@ -13,25 +14,27 @@ class ListView extends Component {
 
   render() {
     let rows = [];
+
     if (this.props.apps) {
       rows = this.props.apps.map(data => {
         return (
-          <div key={data['id']['attributes']['im:id']}>
-            <Link to={`/detail/${data['id']['attributes']['im:id']}`}>
-              <img src={data['im:image'][2]['label']} alt=""/>
-              <strong>{data['im:price']['label']}</strong>
-              <strong>{data['im:name']['label']}</strong>
+          <div className="list-view-row" key={data['id']['attributes']['im:id']}>
+            <Link className="list-view-row__link" to={`/detail/${data['id']['attributes']['im:id']}`}>
+              <img className="list-view-row__thumb" src={data['im:image'][2]['label']} alt=""/>
+              <strong className="list-view-row__label">{data['im:name']['label']}</strong>
             </Link>
           </div>
         );
       })
     }
 
+    const content = (rows.length) ? rows : (<Loading/>);
+
     return (
       <div className="list-view">
-        <h2>List View</h2>
+        <h1 className="title">Top Paid Apps</h1>
 
-        {rows}
+        {content}
       </div>
     );
   };
