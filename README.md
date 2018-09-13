@@ -4,6 +4,15 @@
 
 I did not use 8.12.0 because my `nvm` was having issues installing the related npm on windows. My normal development environment has been OSX to date.
 
+## Installation
+
+Installation is easy, and running it is simple because I never ejected the project. I tested a fresh installation on both projects so if theres any installation issues let me know.
+
+```
+npm install
+npm start
+```
+
 ## Overview
 
 This was a demo react project that works in parallel with the express [portion](https://github.com/bartholomewdavid/QoC-API).
